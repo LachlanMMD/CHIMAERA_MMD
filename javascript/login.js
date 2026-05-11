@@ -2,7 +2,7 @@ class Login extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({
-      mode: "open"
+      mode: "open",
     }); //apparently slots only work with the shadow dom?
   }
   connectedCallback() {
@@ -78,7 +78,7 @@ class Login extends HTMLElement {
         <div class="loginmodal-container">
           <h1>Login</h1><br>
           <p>This is a school project</p>
-          <p>The password is <code>kea</code></p>
+          <p>The password is <code>ek</code></p>
           <form>
             <input type="password" name="pass" placeholder="Password">
             <input type="submit" name="login" class="login loginmodal-submit" value="Login">
@@ -88,11 +88,9 @@ class Login extends HTMLElement {
     </div>`;
     this.render();
 
-    this.shadowRoot.querySelector("form").addEventListener("submit", e => {
+    this.shadowRoot.querySelector("form").addEventListener("submit", (e) => {
       e.preventDefault();
-      if (
-        this.shadowRoot.querySelector("input[name=pass]").value === "kea"
-      ) {
+      if (this.shadowRoot.querySelector("input[name=pass]").value === "ek") {
         document.querySelector("#totally-delete-me").remove();
         localStorage.setItem("iform-totally-logged-in", true);
       }
