@@ -1,14 +1,22 @@
-const carousel = document.querySelector(".about-info_carousel");
+const carousel = document.querySelector(".full-carousel_track");
 
-const images = document.querySelectorAll(".about-info_carousel img");
+const images = document.querySelectorAll(".full-carousel_track img");
 
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
+
+const dots = document.querySelectorAll(".carousel-dots span");
 
 let currentIndex = 0;
 
 function updateCarousel() {
   carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  dots.forEach((dot) => {
+    dot.classList.remove("active-dot");
+  });
+
+  dots[currentIndex].classList.add("active-dot");
 }
 
 nextBtn.addEventListener("click", () => {
