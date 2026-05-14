@@ -1,0 +1,41 @@
+:root {
+  /* Background */
+  --color-bg: #f5f2ec;
+
+  /* Header / footer */
+  --color-head-bg: #f5f2ec;
+
+  /* Menu */
+  --color-menu-bg: #000000;
+
+  /* Link text */
+  --color-link-bg: #000000;
+  --color-link-hover: #e4513a;
+  --color-link-active: #8c2f2f;
+
+  /* Header font størrelser */
+  --font-h1-size: 42px;
+  --font-h2-size: 28px;
+  --font-h3-size: 28px;
+
+  /* Header font farver */
+  --color-h1-bg: #000000;
+  --color-h2-bg: #3858a4;
+  --color-h3-bg: #e4513a;
+
+  /* Text */
+  --color-text: #000000;
+
+  /* Text størrelse */
+  --font-text-size: 20px;
+
+  /* Fonts */
+  --font-family-headings: "Montserrat", ui-sans-serif, sans-serif;
+  --font-family-text: "Geist", ui-sans-serif, sans-serif;
+
+  /* CTA */
+  --color-cta1: #f5f2ec;
+  --color-cta1-hover: #000000;
+  --color-cta2: #e4513a;
+  --color-cta2-hover: #8c2f2f;
+}
