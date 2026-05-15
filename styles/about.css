@@ -1,0 +1,489 @@
+/* ========================= FARVER OG FONTE ========================= */
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-text);
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  padding: 6rem 6%;
+  position: relative;
+  border-top: none;
+}
+
+h1 {
+  font-family: var(--font-family-headings);
+  color: var(--color-h1-bg);
+  line-height: 0.9;
+  font-size: var(--font-h1-size);
+}
+
+h2 {
+  font-family: var(--font-family-headings);
+  color: var(--color-h1-bg);
+  font-size: var(--font-h2-size);
+}
+
+p {
+  font-size: var(--font-text-size);
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+a {
+  color: var(--color-link-bg);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+.section-symbol {
+  color: var(--color-h3-bg);
+  font-weight: 800;
+  font-size: var(--font-h3-size);
+}
+
+/* ========================= HEADER / MENU ========================= */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 8%;
+  background: var(--color-bg);
+  font-family: var(--font-family-headings);
+  text-transform: uppercase;
+  font-size: var(--font-text-size);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.site-header a {
+  text-decoration: none;
+}
+
+.site-header_logo {
+  font-size: var(--font-h2-size);
+  text-transform: lowercase;
+  letter-spacing: -1px;
+}
+
+.site-header_nav {
+  display: flex;
+  gap: 3rem;
+}
+
+.site-header_button {
+  border: 1px solid var(--color-text);
+  padding: 0.8rem 1.4rem;
+  transition: all 0.2s ease;
+}
+
+.site-header_button:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+/* ========================= HERO SECTION ========================= */
+
+.about-hero {
+  position: relative;
+  min-height: 90vh;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  display: none;
+}
+
+.about-hero_content {
+  display: grid;
+  grid-template-columns: 80px 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about-hero h1 {
+  font-size: var(--font-h1-size);
+  margin-bottom: 3rem;
+}
+
+.about-hero h1 span {
+  font-family: serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about-hero_text p {
+  max-width: 30ch;
+  margin-bottom: 2rem;
+}
+
+.about-hero_link {
+  color: var(--color-h3-bg);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.about-hero_link:hover {
+  color: var(--color-link-bg);
+}
+
+.about-hero_images {
+  position: relative;
+}
+
+.about-hero_main-img {
+  height: 550px;
+}
+
+.about-hero_small-img {
+  position: absolute;
+  left: -4rem;
+  bottom: -4rem;
+  width: 450px;
+  height: 260px;
+  border: 8px solid var(--color-bg);
+  filter: none;
+}
+
+.about-hero_images::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 2px solid var(--color-h2-bg);
+  transform: rotate(-1.5deg);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ========================= FULL PAGE CAROUSEL ========================= */
+
+.full-carousel {
+  position: relative;
+  height: 85vh;
+  padding: 0;
+  overflow: hidden;
+  background: var(--color-link-bg);
+  color: var(--color-bg);
+}
+
+.full-carousel::before {
+  display: none;
+}
+
+.full-carousel_track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.full-carousel_track img {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.85) contrast(1.15);
+}
+
+.full-carousel_text {
+  position: absolute;
+  top: 18%;
+  left: 7%;
+  z-index: 5;
+  font-family: var(--font-family-headings);
+  font-size: var(--font-h2-size);
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--color-bg);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: var(--color-bg);
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-h1-size);
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+  left: 3rem;
+}
+
+.next {
+  right: 3rem;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  z-index: 10;
+}
+
+.carousel-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  opacity: 0.7;
+}
+
+.carousel-dots .active-dot {
+  background: var(--color-h3-bg);
+  opacity: 1;
+}
+
+/* ========================= WHO WE ARE SECTION ========================= */
+
+.about-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-info_image {
+  position: relative;
+}
+
+.about-info_image img {
+  height: 650px;
+  object-fit: cover;
+}
+
+.about-info h2 {
+  font-size: var(--font-h2-size);
+  color: var(--color-h2-bg);
+  margin-bottom: 2rem;
+}
+
+.about-info_content p {
+  max-width: 40ch;
+  margin-bottom: 1.5rem;
+}
+
+.about-info_keywords {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+  font-family: var(--font-family-headings);
+  font-size: var(--font-text-size);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ========================= VISION SECTION ========================= */
+
+.vision_content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.vision h2 {
+  font-size: var(--font-h2-size);
+  border-left: 2px solid var(--color-h3-bg);
+  padding-left: 3rem;
+}
+
+.vision_text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.vision_text p {
+  max-width: 28ch;
+}
+
+.vision_text p:last-child {
+  border-left: 1px solid rgba(228, 81, 58, 0.6);
+  padding-left: 3rem;
+}
+
+/* ========================= COMMUNITY SECTION ========================= */
+
+.community {
+  position: relative;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 5rem;
+  align-items: center;
+  background: var(--color-link-bg);
+  color: var(--color-bg);
+}
+
+.community h2,
+.community p,
+.community label {
+  color: var(--color-bg);
+}
+
+.community_image {
+  position: relative;
+}
+
+.community_image img {
+  height: 420px;
+}
+
+.community_image::after {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 2px solid var(--color-h2-bg);
+  transform: rotate(-1.5deg);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.community_label {
+  color: var(--color-h3-bg);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-text-size);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+
+.community h2 {
+  font-size: var(--font-h1-size);
+  margin-bottom: 2rem;
+}
+
+.community_content > p {
+  max-width: 46ch;
+  margin-bottom: 4rem;
+}
+
+.community_form {
+  max-width: 650px;
+}
+
+.community_input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-family-headings);
+  font-size: var(--font-text-size);
+  font-weight: 700;
+}
+
+.community button {
+  background: none;
+  border: none;
+  color: var(--color-h3-bg);
+  font-size: var(--font-h2-size);
+  cursor: pointer;
+}
+
+.community input[type="email"] {
+  width: 100%;
+  padding: 0.8rem 0;
+  margin-bottom: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--color-bg);
+  color: var(--color-bg);
+}
+
+.community_checkbox {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: var(--font-text-size);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.community_checkbox input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-h3-bg);
+}
+
+.community_bracket {
+  position: absolute;
+  color: var(--color-h3-bg);
+  font-family: var(--font-family-headings);
+  font-size: var(--font-h1-size);
+  font-weight: 700;
+}
+
+.community_bracket-left {
+  left: 3%;
+  top: 4rem;
+}
+
+.community_bracket-right {
+  right: 4%;
+  bottom: 5rem;
+}
+
+/* ========================= PAINT STROKE DIVIDERS ========================= */
+/*
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6%;
+  width: 88%;
+  height: 14px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(228, 81, 58, 0.7) 10%,
+    rgba(228, 81, 58, 1) 30%,
+    rgba(228, 81, 58, 0.8) 55%,
+    rgba(228, 81, 58, 0.4) 80%,
+    transparent 100%
+  );
+
+  filter: blur(1px);
+  opacity: 0.45;
+
+  clip-path: polygon(
+    0% 45%,
+    8% 30%,
+    18% 55%,
+    30% 35%,
+    42% 60%,
+    55% 40%,
+    68% 58%,
+    82% 35%,
+    100% 50%,
+    100% 70%,
+    0% 75%
+  );
+}
+*/
