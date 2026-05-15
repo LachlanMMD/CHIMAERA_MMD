@@ -1,0 +1,15 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --bg: #f5f2ec;
+  --text: #111111;
+
+  --accent-red: #c94f3d;
+  --accent-blue: #4c6b8a;
+
+  --container: 1400px;
+
+  --section-padding: 8rem;
+}
