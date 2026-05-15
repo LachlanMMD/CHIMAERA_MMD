@@ -2,3 +2,22 @@
   font-size: 3rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.event-pic {
+  width: 100%; /* Takes up the width of its spot in the flex row */
+  max-width: 400px; /* The absolute limit */
+  margin: 0 auto; /* Centers it if it's smaller than the screen */
+}
+
+.event-pic img {
+  display: block;
+  width: 100%; /* Fills the 400px box */
+  height: 300px; /* Set a fixed height */
+  object-fit: cover; /* Crops the image to fit the 300px height without distorting */
+}
