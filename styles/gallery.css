@@ -6,13 +6,54 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-display: swap;
+  color: #111;
+  margin-left: 40px;
+  font-size: 72px;
+}
+h2 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  color: #e4513a;
+}
+
+h3 {
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  color: #3758a4;
+  margin-left: 45px;
+  font-size: 15px;
+}
+
+p {
+  font-family: "geist", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+  color: white;
+}
+/*LOGO*/
+
+.logo img {
+  max-height: 60px;
+}
+
 /* BODY */
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "montserrat", sans-serif;
 
   background-color: #f5f2ec;
-
+  background-image: url(Chimaera-bgg.png);
+  background-size: contain;
   color: #111;
 }
 
@@ -49,16 +90,6 @@ a {
   padding: 40px;
 }
 
-.page-title h1 {
-  font-size: clamp(4rem, 10vw, 8rem);
-
-  line-height: 0.9;
-
-  font-weight: 600;
-
-  max-width: 6ch;
-}
-
 /* GRID */
 
 .products-grid {
@@ -78,25 +109,15 @@ a {
 /* CARD */
 
 .product-card {
+  width: 200px;
   display: flex;
-
   flex-direction: column;
-}
-
-/* STAGGERED LAYOUT */
-
-.product-card:nth-child(2) {
-  margin-top: 120px;
-}
-
-.product-card:nth-child(3) {
-  margin-top: 40px;
 }
 
 /* IMAGE */
 
 .image-wrap img {
-  width: 100%;
+  width: 300px;
 
   height: auto;
 
@@ -135,13 +156,17 @@ a {
 
 /* DATE */
 
-.price {
+.date {
   font-size: 13px;
 
   color: #444;
 }
 
 /* FOOTER */
+.footer-logo img {
+  width: 100px;
+  height: auto;
+}
 
 .site-footer {
   display: flex;
@@ -153,6 +178,7 @@ a {
   border-top: 1px solid #ddd;
 
   font-size: 14px;
+  background-color: black;
 }
 
 .footer-left {
@@ -165,6 +191,16 @@ a {
   flex-direction: column;
 
   gap: 10px;
+
+  color: #ddd;
+}
+
+.center-img {
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 60px;
 }
 
 /* MOBILE */
