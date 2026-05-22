@@ -1,4 +1,135 @@
-.headline {
-  font-size: 3rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+/* body */
+body {
+  background-color: #fcf9f5; /* Warm off-white background seen in picture */
+  font-family: "Montserrat", sans-serif;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+}
+
+.events {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* text */
+.events h1 {
+  font-family: "Geist", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+/* Event List Container */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Generous spacing between rows */
+}
+
+/* Individual Event Grid */
+.event-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Images aspect ratio management */
+.event-pic img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Typography Inside Cards */
+.event-details h2 {
+  color: #ff5a36; /* Bright coral/orange header color */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.event-details .sub-heading {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.event-details p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+/* Sign Up Buttons */
+.signup-btn {
+  display: inline-block;
+  background-color: #e65333; /* Darker coral/orange button background */
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 0;
+  width: 100%;
+  max-width: 320px;
+  margin-top: 20px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.signup-btn:hover {
+  background-color: #cc4425;
+}
+
+/* --- Layout Modifiers --- */
+
+/* Switches order for Mobile responsiveness & layout control */
+@media (max-width: 768px) {
+  .event-card,
+  .event-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .event-card.reverse .event-details {
+    order: 2;
+  }
+  .event-card.reverse .event-pic {
+    order: 1;
+  }
+}
+
+/* Special Layout Rule for the Final Ink Workshop Row */
+.event-card.row-layout {
+  grid-template-columns: 1fr; /* Full width image stack */
+  max-width: 500px; /* Matches the single column look */
+}
+
+.inline-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  width: 100%;
+}
+
+.inline-details h2 span {
+  color: #ff5a36;
+}
+
+.inline-details h2 {
+  color: #1a1a1a; /* Combines colored title and name text */
+  font-size: 1.2rem;
+}
+
+.inline-details .signup-btn {
+  margin-top: 0;
+  padding: 12px 30px;
+  width: auto;
 }
