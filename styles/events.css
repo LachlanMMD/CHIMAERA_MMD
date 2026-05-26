@@ -89,7 +89,7 @@ body {
 }
 
 .signup-btn:hover {
-  background-color: #cc4425;
+  background-color: #e4513a;
 }
 
 .events-header {
@@ -108,7 +108,7 @@ body {
   margin: 0;
 }
 .join-us-link {
-  color: #3b5998;
+  color: #3858a4;
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   font-weight: 800;
@@ -157,12 +157,12 @@ body {
 
 .ink-text-details h2 {
   font-size: 1.2rem;
-  color: #1a1a1a;
+  color: #000000;
   margin: 0 0 5px 0;
 }
 
 .ink-text-details h2 span {
-  color: #ff5a36;
+  color: #e4513a;
 }
 
 .decorative-ink-side img {
@@ -175,6 +175,18 @@ body {
 .ink-action-row {
   display: flex;
   justify-content: flex-end;
+}
+
+.ink-text-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ink-text-details .signup-btn {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 320px;
 }
 
 @media (max-width: 768px) {
@@ -232,4 +244,5 @@ body {
   margin-top: 0;
   padding: 12px 30px;
   width: auto;
+  max-width: 900px;
 }
