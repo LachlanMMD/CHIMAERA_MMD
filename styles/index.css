@@ -83,7 +83,7 @@ p {
   font-size: 0.8rem;
 
   margin-bottom: 1.5rem;
-
+  margin-left: 5px;
   color: var(--accent-blue);
 }
 
@@ -132,6 +132,7 @@ p {
 ========================= */
 
 .site-header {
+  position: relative;
   display: flex;
 
   justify-content: space-between;
@@ -140,28 +141,41 @@ p {
 
   padding: 30px 40px;
 
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .main-nav {
   display: flex;
-
+  margin-top: 40px;
   gap: 24px;
 }
 
+.site-header::before {
+  content: "";
+
+  position: absolute;
+
+  left: 40px;
+  right: 40px;
+  bottom: 50px;
+
+  height: 1px;
+
+  background: var(--accent-red);
+}
 /* =========================
    HERO
 ========================= */
 
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 7rem;
 
   align-items: start;
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 
 .hero-content {
@@ -171,43 +185,25 @@ p {
 }
 
 .hero-description {
-  max-width: 40ch;
+  font-size: 1rem;
+  line-height: 1.9;
 
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-
-  font-size: 1.1rem;
-}
-.hero-image::before,
-.hero-image::after {
-  content: "";
-  position: absolute;
-  inset: -10px;
-  pointer-events: none;
+  opacity: 0.78;
 }
 
-.hero-image::before {
-  border: 1px solid var(--accent-red);
-  transform: rotate(1deg);
-}
-
-.hero-image::after {
-  border: 2px solid var(--accent-red);
-  inset: -16px;
-  transform: rotate(-1.5deg);
-}
 .hero-image {
   position: relative;
 
-  width: 500px;
-  height: 400px;
+  width: 750px;
+  height: 750px;
 }
 
 .hero-image img {
-  width: 100%;
-  height: 100%;
+  width: 750px;
+  height: 750px;
   object-fit: cover;
 }
+
 /* =========================
    MANIFESTO
 ========================= */
@@ -217,7 +213,6 @@ p {
 
   position: relative;
 }
-
 .manifesto-inner {
   width: min(1400px, calc(100% - 6rem));
   margin: 0 auto;
@@ -228,7 +223,7 @@ p {
   letter-spacing: 0.08em;
 
   font-size: 0.8rem;
-
+  margin-left: 5px;
   margin-bottom: 1.5rem;
 
   color: var(--accent-blue);
@@ -236,9 +231,26 @@ p {
 
 .manifesto-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 6rem;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.manifesto-image {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+}
+
+.manifesto-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 65% center;
 }
 
 .manifesto-grid h2 {
@@ -246,20 +258,31 @@ p {
   line-height: 0.92;
   font-weight: 500;
 
-  max-width: 11ch;
+  max-width: 9ch;
+
+  margin-bottom: 2rem;
 }
 
 .manifesto-text {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.9;
 
-  max-width: 42ch;
-
-  opacity: 0.8;
-
-  padding-top: 0.75rem;
+  opacity: 0.78;
 }
 
+.manifesto-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.manifesto-content h1 {
+  font-size: clamp(3rem, 5vw, 5.5rem);
+
+  line-height: 0.92;
+
+  max-width: 8ch;
+}
 .manifesto::after {
   content: "";
 
@@ -315,7 +338,7 @@ p {
 
 .event-image img {
   aspect-ratio: 4 / 5;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .event-info {
@@ -335,6 +358,19 @@ p {
   margin-top: 1rem;
 
   max-width: 35ch;
+}
+.featured-events::after {
+  content: "";
+
+  position: absolute;
+
+  left: 40px;
+  bottom: 0;
+
+  width: calc(100% - 80px);
+  height: 1px;
+
+  background: linear-gradient(to right, transparent, color-mix(in srgb, var(--accent-red) 40%, transparent), transparent);
 }
 /* =========================
    EVENT IMAGE HOVER
@@ -374,30 +410,16 @@ p {
 }
 
 .event-vector {
-  object-fit: contain;
+  width: 80%;
+  height: 80%;
 
-  padding: 2rem;
+  margin: auto;
+
+  object-fit: contain;
 
   opacity: 0;
 
   transform: scale(0.95);
-}
-body::before {
-  content: "";
-
-  position: fixed;
-
-  top: 0;
-  left: 40px;
-
-  width: 1px;
-  height: 100vh;
-
-  background: color-mix(in srgb, var(--accent-red) 55%, transparent);
-
-  z-index: 9999;
-
-  pointer-events: none;
 }
 
 /* =========================
@@ -409,21 +431,6 @@ body::before {
   position: relative;
 }
 
-.featured-events::before,
-.cta-section::before {
-  content: "";
-
-  position: absolute;
-
-  left: 40px;
-  bottom: 0;
-
-  width: calc(100% - 80px);
-  height: 1px;
-
-  background: linear-gradient(to right, transparent, color-mix(in srgb, var(--accent-red) 40%, transparent), transparent);
-}
-
 .featured-events {
   padding-top: 8rem;
 }
@@ -431,7 +438,40 @@ body::before {
 .cta-section {
   padding-top: 8rem;
 }
+/* =========================
+   COMMUNITY
+========================= */
+.community-section {
+  background: linear-gradient(to bottom, var(--bg), #e8dfd2);
+}
 
+.community {
+  max-width: var(--container);
+
+  margin: 0 auto;
+
+  padding: 10rem 4rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.community_image {
+  position: relative;
+
+  padding: 0.75rem;
+
+  background: color-mix(in srgb, var(--accent-red) 6%, white);
+
+  border-radius: 4px 24px 4px 24px;
+
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.community_image img {
+  border-radius: 12px;
+}
 /* =========================
    FOOTER
 ========================= */
@@ -449,9 +489,9 @@ body::before {
   padding: 40px;
 
   border-top: 1px solid #ddd;
-
+  color: var(--text);
   font-size: 14px;
-  background-color: black;
+  background-color: var(--bg, white);
 }
 
 .footer-left {
@@ -465,7 +505,7 @@ body::before {
 
   gap: 10px;
 
-  color: #ddd;
+  color: var(--text);
 }
 
 .center-img {
