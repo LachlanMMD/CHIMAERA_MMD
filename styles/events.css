@@ -1,8 +1,12 @@
 /* body */
 body {
-  background-color: #fcf9f5; /* Warm off-white background seen in picture */
+  background-color: #f5f2ec;
+  background-image: url(../imgs/events/ink-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
   font-family: "Montserrat", sans-serif;
-  color: #1a1a1a;
+  color: #000000;
   margin: 0;
   padding: 0;
 }
@@ -27,7 +31,7 @@ body {
 .event-list {
   display: flex;
   flex-direction: column;
-  gap: 80px; /* Generous spacing between rows */
+  gap: 80px;
 }
 
 /* Individual Event Grid */
@@ -38,7 +42,7 @@ body {
   align-items: center;
 }
 
-/* Images aspect ratio management */
+/* Images */
 .event-pic img {
   width: 100%;
   height: auto;
@@ -48,7 +52,7 @@ body {
 
 /* Typography Inside Cards */
 .event-details h2 {
-  color: #ff5a36; /* Bright coral/orange header color */
+  color: #e4513a;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 10px 0;
@@ -70,8 +74,8 @@ body {
 /* Sign Up Buttons */
 .signup-btn {
   display: inline-block;
-  background-color: #e65333; /* Darker coral/orange button background */
-  color: #ffffff;
+  background-color: #e4513a;
+  color: #f5f2ec;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
@@ -88,9 +92,106 @@ body {
   background-color: #cc4425;
 }
 
-/* --- Layout Modifiers --- */
+.events-header {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 50px;
+}
 
-/* Switches order for Mobile responsiveness & layout control */
+.events-header h1 {
+  font-family: "Geist", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+.join-us-link {
+  color: #3b5998;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
+}
+
+.join-us-link:hover {
+  opacity: 0.8;
+}
+
+.decorative-ink-bottom {
+  margin-top: 30px;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.decorative-ink-bottom img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.ink-workshop-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ink-workshop-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.ink-main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ink-text-details h2 {
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  margin: 0 0 5px 0;
+}
+
+.ink-text-details h2 span {
+  color: #ff5a36;
+}
+
+.decorative-ink-side img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.ink-action-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .ink-workshop-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .ink-action-row {
+    justify-content: center;
+  }
+  .ink-action-row .signup-btn {
+    width: 100%;
+  }
+}
+
+/* --- Layout --- */
+
 @media (max-width: 768px) {
   .event-card,
   .event-card.reverse {
@@ -105,10 +206,9 @@ body {
   }
 }
 
-/* Special Layout Rule for the Final Ink Workshop Row */
 .event-card.row-layout {
-  grid-template-columns: 1fr; /* Full width image stack */
-  max-width: 500px; /* Matches the single column look */
+  grid-template-columns: 1fr;
+  max-width: 500px;
 }
 
 .inline-details {
@@ -120,11 +220,11 @@ body {
 }
 
 .inline-details h2 span {
-  color: #ff5a36;
+  color: #e4513a;
 }
 
 .inline-details h2 {
-  color: #1a1a1a; /* Combines colored title and name text */
+  color: #000000;
   font-size: 1.2rem;
 }
 
