@@ -1,3 +1,26 @@
+/* header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 40px;
+  font-size: 14px;
+}
+.logo img {
+  max-height: 60px;
+}
+
+.main-nav {
+  display: flex;
+
+  gap: 24px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
 /* body */
 body {
   background-color: #f5f2ec;
@@ -50,7 +73,6 @@ body {
   display: block;
 }
 
-/* Typography Inside Cards */
 .event-details h2 {
   color: #e4513a;
   font-size: 1.5rem;
@@ -131,7 +153,7 @@ body {
 
 .decorative-ink-bottom img {
   width: 100%;
-  height: auto;
+  height: 600px;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
@@ -167,7 +189,7 @@ body {
 
 .decorative-ink-side img {
   width: 100%;
-  height: auto;
+  height: 600px;
   object-fit: contain;
   mix-blend-mode: multiply;
 }
@@ -245,4 +267,54 @@ body {
   padding: 12px 30px;
   width: auto;
   max-width: 900px;
+}
+
+/* footer */
+.footer-logo img {
+  width: 200px;
+  height: auto;
+}
+
+.site-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 40px;
+
+  border-top: 1px solid #ddd;
+
+  font-size: 14px;
+  background-color: black;
+}
+
+.footer-left {
+  max-width: 300px;
+}
+.footer-left p {
+  color: #ddd;
+  margin-top: 10px;
+}
+
+.footer-right {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  color: #ddd;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #f5f2ec;
+}
+
+.center-img {
+  display: flex;
+
+  justify-content: center;
+
+  margin-bottom: 60px;
 }
