@@ -50,11 +50,10 @@ p {
 
 body {
   font-family: "montserrat", sans-serif;
-
   background-color: #f5f2ec;
-  background-image: url(Chimaera-bgg.png);
-  background-size: contain;
-  color: #111;
+  background-image: url(../Chimaera-bgg.png);
+  background-size: repeat;
+  background-position: center;
 }
 
 /* LINKS */
