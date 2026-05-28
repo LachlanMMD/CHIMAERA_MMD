@@ -168,21 +168,6 @@ p {
   height: auto;
   z-index: 1;
 }
-/* =========================
-   TEXTURES
-========================= */
-
-background-texture {
-  position: fixed;
-  inset: 0;
-
-  z-index: -1;
-
-  background-image: url("../imgs/texture.webp");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.08;
-}
 
 /* =========================
    HERO
