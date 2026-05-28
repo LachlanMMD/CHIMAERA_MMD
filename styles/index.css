@@ -422,7 +422,7 @@ p {
 .event-vector {
   position: absolute;
 
-  inset: 14%;
+  inset: 14% 8% 14% 8%;
 
   width: auto;
   height: auto;
@@ -433,7 +433,7 @@ p {
 
   opacity: 0;
 
-  transform: scale(0.92);
+  transform: scale(0.9);
 
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -578,8 +578,6 @@ p {
   background: transparent;
 
   color: var(--text);
-
-  flex: 1;
 }
 
 .community input[type="email"]:focus {
@@ -618,15 +616,26 @@ p {
   padding: 40px;
 
   border-top: 1px solid #ddd;
-  color: var(--text);
+
   font-size: 14px;
-  background-color: var(--text);
+  color: var(--color-bg);
+  background-color: black;
 }
 
+.site-footer a {
+  color: var(--color-bg);
+}
+
+.site-footer a:hover {
+  color: var(--color-link-hover);
+}
 .footer-left {
   max-width: 300px;
 }
-
+.footer-left p {
+  color: var(#f5f2ec);
+  margin-top: 10px;
+}
 .footer-right {
   display: flex;
 
@@ -634,7 +643,7 @@ p {
 
   gap: 10px;
 
-  color: var(--text);
+  color: #ddd;
 }
 
 .center-img {

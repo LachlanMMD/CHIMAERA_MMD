@@ -15,4 +15,15 @@
 
   --section-spacing: 8rem;
   --content-spacing: 2rem;
+
+  --color-link-bg: #000000;
+  --color-link-hover: #e4513a;
+  --color-link-active: #8c2f2f;
+
+  --color-h1-bg: #000000;
+  --color-h2-bg: #3858a4;
+  --color-h3-bg: #e4513a;
+
+  --color-cta1: #f5f2ec;
+  --color-cta2: #e4513a;
 }
